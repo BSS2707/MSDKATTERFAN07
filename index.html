@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Msd Katter Fan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        nav {
+            justify-content: space-between;
+            display: flex;
+            background-color: lightblue;
+            height: 80px;
+            align-items: center;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        nav img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            padding: 12px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 22px;
+            font-family: sans-serif;
+        }
+
+        nav a:hover {
+            color: blue;
+            font-size: 1.5rem;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                background-color: lightblue;
+                width: 100%;
+                padding: 20px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            nav ul li {
+                padding: 15px;
+                text-align: center;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+        }
+
+        /* About Us Section */
+        .para {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .logo {
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .h-text {
+            font-size: 30px;
+            color: rgb(40, 132, 244);
+            margin: 3px;
+        }
+
+        .h2 {
+            margin: 5px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .i1 img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .pl {
+            margin: 20px;
+        }
+
+        /* General Styles */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        /* Form Fields */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Submit Button */
+        button[type="submit"] {
+            background-color: #253cd6;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: black;
+        }
+
+        /* Honeypot Checkbox */
+        input[name="botcheck"] {
+            display: none;
+        }
+
+        /* Footer */
+        .text-footer {
+            margin: 35px;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: rgb(21, 95, 231);
+        }
+
+        /* Player Section */
+        .player-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .player {
+            text-align: center;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        .player h3 {
+            font-size: 18px;
+        }
+
+        .player img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        /* Responsive adjustments for Player section */
+        @media (max-width: 768px) {
+            .player {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .player {
+                width: 90%;
+            }
+        }
+    </style>
+    <link rel="icon" type="png"  href="logo.png">
+</head>
+<body>
+    <nav>
+       
+        <img src="logo.png"  alt="">
+        <div class="hamburger" style="color: black;">&#9776;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#About us">About us</a></li>
+            <li><a href="#Player">Player</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          
+    </nav>
+    <section id="About us">
+        <div class="heading">
+           <center>
+
+               <img src="logo.png" alt="" class="logo">
+           </center> 
+           <center>
+
+               <h1 class="h-text" >
+                    Msd Katter fan
+                </h1>
+           </center> 
+            <div>
+                <p class="para">
+                This Team is Motivatad by The Ms Dhoni.the team has devloped in since 2017 when the frist time FLG(Fan laugae Clud) that
+                and have get are 4 team ahead like VK KATTER FAN, RS KATTER FAN, ST KATTER FAN AND YS KATTER FAN.
+                been melted by the bhakti dharm charebal trust the team have most suceesfull team when
+                the team have great player are 
+                like them great captain bolwer kepper batsman and feider them
+                <h1 style="color: rgb(34, 170, 239);">Winning year: 2018,2019,2022,2023,2024  </h1> 
+
+            </p>
+        </div>
+            <hr>
+        </div>
+    </section>
+    <section id="Player">
+    <h2 class="h2">Player list 2024-25</h2>
+    <li class="i1">
+        <center class="pl"><img src="cricket-player.png" alt="" ></center>
+        <center class="pl" style="color: white;">
+            <h3>Name :Bhavya S Solanki</h3>
+            <h3>Role :Wicket kepper Batsman</h3>
+            <h3>Extnal Role :Captian(Most suceesfull Winning Captian with 3 tropy)</h3>
+            
+            <center class="pl"><img src="cricket-player.png" alt="" ></center class="pl">
+            <h3>Name :Vivek B Parmar</h3>
+            <h3>Role :Batsman</h3>
+            <h3>Extnal Role :Vice-Captian</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Krishna M Oza</h3>
+            <h3>Role :All Rounder</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Krish M Oza</h3>
+            <h3>Role :All Rounder</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Raju K Parwar</h3>
+            <h3>Role :Batsman</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Ramesh R Patel</h3>
+            <h3>Role :Batsman</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Deep A Shah</h3>
+            <h3>Role :Bowling All Rounder Fast</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Nitin A Patel</h3>
+            <h3>Role :laft arm fast</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Shivam K Daruwala</h3>
+            <h3>Role :Fast mediuam</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Shiv V Dave</h3>
+            <h3>Role :Off-break</h3>
+        </center>
+
+        <center class="pl" style="color: white;"><img src="cricket-player.png" alt="" ></<center class="pl" >
+            <h3>Name :Bhavesh J Pandya</h3>
+            <h3>Role :Leg-break</h3>
+        </center>      
+    </li>
+    </section>
+<hr>
+<center id="Contact">
+    <h2 style="color: white;">Contect</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="370e95de-d023-4c08-8395-cb98481d918e">
+    
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <input type="email" name="email" placeholder="Enter Your Gmail">
+        <textarea name="message" placeholder="Give Me message"></textarea>
+    
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+        <!-- Custom Confirmation / Success Page -->
+        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+    
+        <button type="submit">Submit Form</button>
+    
+    </form>
+</center>
+<footer>
+    <footer >
+        <p class="text-footer">
+            Copyright &copy; 2024-2025 www.msdkatterfan.in.com- All Right reserved
+        </p>
+        
+    </footer>
+</footer>
+<script>
+     const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    </script>
+    
+</body>
+</html>
